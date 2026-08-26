@@ -1,3 +1,6 @@
-livekit-agents[deepgram,anthropic,elevenlabs,silero]~=1.0
-python-dotenv
+fastapi
+uvicorn[standard]
+wsproto
+anthropic
 supabase
+python-dotenv
