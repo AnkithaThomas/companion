@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { userRouter } from "next/naviagtion"
+import { useRouter } from "next/navigation"
 
 const router = useRouter();
 
