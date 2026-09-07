@@ -6,8 +6,10 @@ import {
 
 export default function StartCall({
   accessToken,
+  userId,
 }: {
   accessToken: string;
+  userId?: string;
 }) {
   const { connect, disconnect, readyState } = useVoice();
 
@@ -27,7 +29,11 @@ export default function StartCall({
     <button
       onClick={() => {
         connect({
-          auth: { type: "accessToken", value: accessToken }
+          auth: { type: "accessToken", value: accessToken },
+          sessionSettings: {
+            type: "session_settings",
+            customSessionId: userId,
+          },
         })
           .then(() => {
             /* handle success */

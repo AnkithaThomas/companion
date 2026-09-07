@@ -4,13 +4,15 @@ import StartCall from "./StartCall";
 
 export default function Chat({
   accessToken,
+  userId,
 }: {
   accessToken: string;
+  userId?: string;
 }) {
   return (
     <VoiceProvider>
       <Messages />
-      <StartCall accessToken={accessToken} />
+      <StartCall accessToken={accessToken} userId={userId} />
     </VoiceProvider>
   );
 }
